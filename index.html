@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ma page tailwindcss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 md:t">
+    <!-- Haut de la page -->
+    <header class="bg-blue-600 text-white">
+        <nav class="w-full">
+            <div class="container mx-auto max-w-7xl px-2">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex shrink-0 items-center text-white">
+                    Bienvenue sur la plateforme TCF Canada
+                    </div>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4 pl-52">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="cv.html" class="rounded-md  px-3 py-2 text-sm font-medium text-white hover:text-gray-400 "><i class="fa-solid fa-graduation-cap"></i> FORMATIONS</a>
+                      <a href="tarif_tailwindcss.html" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-solid fa-credit-card"></i> TARIFS</a>
+                      <a href="tailwind.html" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-sharp-duotone fa-solid fa-headset"></i> CONTACTEZ-NOUS</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-solid fa-wifi"></i> BLOG</a>
+                    </div>
+                  </div>
+                </div>
+                  <div class="mr-6">
+                    <div class="mr-40 flex items-center space-x-2 sm:mr-6">
+                        <a href="" class="l"><i class="fa-brands fa-facebook"></i></a> <a href="" class="l"><i class="fa-brands fa-instagram"></i></a> <a href="" class="l"><i class="fa-brands fa-youtube"></i></a> <a href="" class="l"><i class="fa-brands fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class=" bg-zinc-50 p-2 flex space-x-4 ">
+        <button class="md:hidden text-gray-800" id="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          <div class="w-32 ml-6">
+        <img src="logo.webp" alt="logo" height="30%" width="70%" class="ml-48 sm:ml-6">
+      </div>
+        <div class="hidden sm:ml-6 sm:block">
+        <ul class="flex space-x-4 p-4 pl-52 ">
+            <li class="deuxieme space-x-4 relative group"><a href="" class=" space-x-2 hover:text-blue-600"><i class="fa-duotone fa-solid fa-book-open-reader"></i><span> COMPREHENSION ECRITE </span></a>
+            <ul class="absolute left-0 w-48 bg-white border shadow-lg hidden group-hover:block">
+                <li><a href="" class="hover:text-blue-600">Les sujets d'actualites</a></li>
+                <li><a href="" class="hover:text-blue-600">Methodologie</a></li>
+                <li><a href="" class="hover:text-blue-600"> correction des sujets d'expression ecritee</a></li>
+                <li><a href="" class="hover:text-blue-600">Plate-forme de redaction</a></li>
+            </ul>
+        </li>
+            <li class="deuxieme space-x-4 relative group"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-headphones"></i><span> COMPREHENSION ORALE</span></a>
+            <ul class="absolute left-0 w-48 bg-white border border-gray-200  shadow-lg hidden group-hover:block w-48 ">
+                <li><a href="" class="hover:text-blue-600">Les sujets d'actualites</a></li>
+                <li><a href="" class="hover:text-blue-600">Methodologie</a></li>
+                <li><a href="" class="hover:text-blue-600"> correction des sujets </a></li>
+            </ul>
+        </li>
+            <li class="deuxieme space-x-4"><a href="formulaire_actif.html" class=" hover:text-blue-600"><i class="fa-sharp fa-solid fa-right-to-bracket"></i><span> SE CONNECTER</span></a></li>
+            <li class="deuxieme space-x-4"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-pen"></i><span> EXPRESSION ECRITE</span></a>
+            <li class="deuxieme space-x-4"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-person-military-to-person"></i><span> EXPRESSION ORALE</span></a>    
+        </ul>
+       </div>
+      </div>
+    
+        <!-- Section principale -->
+  <main class="px-6 py-6 sm:w-auto">
+    <div class="relative shadow-md ml-40 mr-40 p-28 sm:p-28"
+    style="background-image: url('tcf.webp');
+    background-size: cover;
+    background-position: center;">
+        <h2 class="text-white font-bold">Bonjour 691928589 Matho Boudjiho Zidane</h2>
+        <p class="text-white">Membre depuis décembre 5, 2024</p>
+    
+      <!-- Menu d'options -->
+      <div class="absolute bottom-0 left-0 right-0 py-2 flex bg-neutral-700 p-2 shadow ">
+        <a href="#" class="px-4 text-white font-semibold hover:bg-neutral-900"><i class="fa fa-home" aria-hidden="true"></i> Bienvenue</a>
+        <a href="#" class="px-4 text-white font-semibold hover:bg-neutral-900"><i class="fa fa-user" aria-hidden="true"></i> Profile Details</a>
+        <a href="#" class="px-4 text-white font-semibold hover:bg-neutral-900"><i class="fa fa-microphone" aria-hidden="true"></i> Subscriptions</a>
+        <a href="#" class="px-4 text-white font-semibold hover:bg-neutral-900"><i class="fa fa-sort" aria-hidden="true"></i> Orders</a>
+        <a href="#" class="px-4 text-white font-semibold hover:bg-neutral-900"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> LogOut</a>
+      </div>
+    </div>
+       <h2 class="text-center text-lg mt-16 mb-16">Bienvenue</h2>
+    <!-- Bouton S'entraîner -->
+    <div class="mt-6 text-center">
+      <a href="#" class="bg-blue-600 text-white py-4 px-40 w-80 rounded-lg shadow transform transition duration-300 hover:scale-110 hover:bg-blue-600 md:w-32">S'entraîner →</a>
+    </div>
+  </main>
+  <div class="flex bg-blue-600 text-white mt-8 py-10 px-4">
+      <!-- Navigation -->
+       <div class="w-full sm:flex ml-12">
+      <div class="ml-12 sm:ml-40">
+        <h3 class="font-bold mb-2">Les pages</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class=""><i class="fa-solid fa-house-chimney"></i> Page d'accueil</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-book-open"></i> Compréhension Écrite</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-headphones"></i> Compréhension Orale</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-pen-to-square"></i> Expression Écrite</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-people-arrows"></i> Expression Orale</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-scale-balanced"></i> Politique de retour et de remboursement</a></li>
+        </ul>
+      </div>
+      <div class="ml-12">
+            <ul class="les_pages">
+                <li class="pag"><i class="fa-solid fa-gavel"></i> <span>Politique de confidentialite</span></li>
+                <hr class="w-52 border-t-1 my-2">
+                <li id="page"><i class="fa-solid fa-wifi"></i> <span>Blog</span></li>
+            </ul>
+        <h2 class="font-bold">Parametres du compte</h2>
+        <div class=" w-60 flex flex-col flex-1 bg-blue-600 ">
+            <a href="formulaire_actif.html" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow"><span class=""><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Se connecter</span></a>
+            <a href="formulaire_actif.html" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow "><span class=""><i class="fa-solid fa-user-plus"></i> S'inscrire</span></a>
+            <a href="" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow"><span class=""><i class="fa-solid fa-lock"></i> Mots de passe oublie</span></a>
+        </div>
+      </div>
+      <!-- Réseaux sociaux -->
+      <div class=" text-center mr-12">
+        <h4 class="font-bold mb-2">Nos Réseaux Sociaux</h4>
+        <div class="flex space-x-4 justify-center ">
+            <a href="" ><i class="fa-brands fa-youtube" style="color: #ab2b2b;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook" style="color: #063d9d;"></i></a>
+            <a href=""><i class="fa-brands fa-square-whatsapp" style="color: #63E6BE;"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        <div>
+        <h3 class="font-bold mb-4"> A propos de nous</h3>
+            <p  class="mb-4">plateforme specialisée dans la préparation au TCF Canada tests à conditions réelles sujets récents.</p>
+        </div>
+        </div>
+    <div class="text-center mr-40">
+        <h4 class="font-bold mb-4">Nous acceptons</h4>
+        <div class="flex flex-col bg-white rounded-lg justify-center items-center p-14 pr-32">
+        <div class="flex space-x-4 space-y-4">
+           <img src="paypal.jpeg" alt="" class="w-48 rounded-lg">
+           <img src="wester.jpg" alt="" class="w-48 rounded-lg">
+        </div>
+        <div class="flex space-x-4 space-y-2">
+           <img src="orange.jpeg" alt="" class="w-48 rounded-lg">
+           <img src="mtn.jpeg" alt="" class="w-48 rounded-lg">
+        </div>
+        </div>
+        <div class="mt-6 text-center">
+            <a href="#" class="bg-white text-slate-900 py-2 px-20 rounded-lg shadow hover:origin-top sm:px-20">Cliquez-ici</a>
+        </div>
+    </div>
+  </div>
+</div>
+    </body>
+    
+</html>

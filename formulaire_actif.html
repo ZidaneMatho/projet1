@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire_actif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <style>
+      /* Styles supplémentaires pour le formulaire */
+      .required-star {
+        color: red;
+        margin-left: 4px;
+      }
+      .valid-check {
+        color: green;
+        margin-left: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-500 flex justify-center items-center min-h-screen">
+    <div class=" flex-col space-y-4"> <a href="index.html" class="text-blue-500">page index</a> <a href="tarif_tailwindcss.html"> page tarifs</a></div>
+    <div class="flex flex-col lg:flex-row bg-white shadow-lg overflow-hidden w-full max-w-2xl mx-4">
+      <!-- Section image -->
+      <div class="lg:w-1/2 w-full">
+        <img src="Capture d’écran_10-12-2024_85035_login.formation-tcfcanada.com.jpeg" alt="Image Formulaire" class="h-64 lg:h-full w-full object-cover">
+      </div>
+  
+      <!-- Section formulaire -->
+      <div class="w-full lg:w-1/2 p-6">
+        <!-- Onglets d'options -->
+        <div class="flex justify-between mb-6">
+          <button
+            id="login-tab"
+            class="bg-slate-200 text-gray-600 font-bold p-2 pb-2 pr-10 focus:outline-none"
+            onclick="showForm('login')"
+          >
+            Se connecter
+          </button>
+          <button
+            id="register-tab"
+            class="bg-sky-600 pb-2 text-center text-white font-bold p-2 pl-16 focus:outline-none"
+            onclick="showForm('register')"
+          >
+            S'inscrire
+          </button>
+        </div>
+  
+        <!-- Formulaire d'inscription -->
+        <form id="register-form" class="space-y-4" onsubmit="handleSubmit(event, 'register')">
+          <div>
+              <span class="required-star">*</span>
+              <span class="valid-check hidden"><i class="fas fa-check-circle"></i></span>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500">
+              <i class="fas fa-user mr-2 text-gray-500"></i>
+              <input
+                type="text"
+                id="register-username"
+                class="w-full outline-none"
+                placeholder="Nom d'utilisateur"
+                required
+                oninput="validateInput(this)"
+              />
+            </div>
+          </div>
+          <div>
+              <span class="required-star">*</span>
+              <span class="valid-check hidden"><i class="fas fa-check-circle"></i></span>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500">
+              <i class="fas fa-envelope mr-2 text-gray-500"></i>
+              <input
+                type="email"
+                id="register-email"
+                class="w-full outline-none"
+                placeholder="Email"
+                required
+                oninput="validateInput(this)"
+              />
+            </div>
+          </div>
+          <div>
+              <span class="required-star">*</span>
+              <span class="valid-check hidden"><i class="fas fa-check-circle"></i></span>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500">
+              <i class="fas fa-user-tag mr-2 text-gray-500"></i>
+              <input
+                type="text"
+                id="register-fullname"
+                class="w-full outline-none"
+                placeholder="Nom Complet"
+                required
+                oninput="validateInput(this)"
+              />
+            </div>
+          </div>
+          <div>
+              <span class="required-star">*</span>
+              <span class="valid-check hidden"><i class="fas fa-check-circle"></i></span>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500">
+              <i class="fas fa-phone mr-2 text-gray-500"></i>
+              <input
+                type="tel"
+                id="register-phone"
+                class="w-full outline-none"
+                placeholder="Numéro de téléphone"
+                required
+                oninput="validateInput(this)"
+              />
+            </div>
+          </div>
+          <div>
+              <span class="required-star">*</span>
+              <span class="valid-check hidden"><i class="fas fa-check-circle"></i></span>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500 relative">
+              <i class="fas fa-lock mr-2 text-gray-500"></i>
+              <input
+                type="password"
+                id="register-password"
+                class="w-full outline-none"
+                placeholder="Mot de passe"
+                required
+                oninput="validateInput(this)"
+              />
+              <button
+                type="button"
+                class="absolute right-2 text-gray-500"
+                onclick="togglePassword('register-password', this)"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white font-bold py-2 rounded-2xl hover:bg-blue-600"
+          >
+            S'inscrire
+          </button>
+        </form>
+  
+        <!-- Formulaire de connexion -->
+        <form id="login-form" class="space-y-4 hidden" onsubmit="handleSubmit(event, 'login')">
+          <div>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500">
+              <i class="fas fa-user mr-2 text-gray-500"></i>
+              <input
+                type="text"
+                id="login-username"
+                class="w-full outline-none"
+                placeholder="Nom d'utilisateur ou Email"
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center border p-2 rounded focus-within:ring-2 focus-within:ring-blue-500 relative">
+              <i class="fas fa-lock mr-2 text-gray-500"></i>
+              <input
+                type="password"
+                id="login-password"
+                class="w-full outline-none"
+                placeholder="Mot de passe"
+                required
+              />
+              <button
+                type="button"
+                class="absolute right-2 text-gray-500"
+                onclick="togglePassword('login-password', this)"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Options supplémentaires -->
+  <div class="flex items-center space-x-2 justify-between text-sm text-gray-600">
+    <!-- Case à cocher "Se rappeler de moi" -->
+    <label class="flex items-center">
+      <input type="checkbox" class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400" />
+      <span class=""> Se rappeler de moi</span>
+    </label>
+
+    <!-- Lien "Mot de passe oublié" -->
+    <a href="#" class="hover:underline">Mot de passe oublié ?</a>
+  </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white font-bold py-2 rounded-2xl hover:bg-blue-600"
+          >
+            Se connecter
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <script>
+      function validateInput(input) {
+        const parent = input.parentNode.parentNode;
+        const validCheck = parent.querySelector(".valid-check");
+        const requiredStar = parent.querySelector(".required-star");
+  
+        if (input.checkValidity() && input.value.trim() !== "") {
+          validCheck.classList.remove("hidden");
+          requiredStar.classList.add("hidden");
+        } else {
+          validCheck.classList.add("hidden");
+          requiredStar.classList.remove("hidden");
+        }
+      }
+  
+      function showForm(type) {
+        document.getElementById("register-form").classList.toggle("hidden", type !== "register");
+        document.getElementById("login-form").classList.toggle("hidden", type !== "login");
+      }
+  
+      function togglePassword(inputId, button) {
+        const input = document.getElementById(inputId);
+        const icon = button.querySelector("i");
+        input.type = input.type === "password" ? "text" : "password";
+        icon.classList.toggle("fa-eye");
+        icon.classList.toggle("fa-eye-slash");
+      }
+  
+      function handleSubmit(event, formType) {
+        event.preventDefault();
+        alert(formType === "register" ? "Inscription réussie !" : "Connexion réussie !");
+      }
+    </script>
+  </body>
+</html>  

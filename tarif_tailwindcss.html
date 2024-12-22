@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ma page tailwindcss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .les_tarifs{
+    display: flex;
+    margin-left: 18%;
+    margin-top: 45px;
+}
+#cadre_1{
+    margin-bottom: 120px;
+  }
+#cadre_2{
+    margin-bottom: 120px;
+    width: 320px;
+  }
+.cadre{
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid blue;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.5s;
+  }
+
+  .bronze {
+    background-color: #233cfa;
+    color: #fff;
+    padding: 30px 15px;
+    position: relative;
+  }
+
+  .bronze h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  .bronze .ribban {
+    position: absolute;
+    top: 20;
+    right: 0;
+    background-color: #f99843;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 20px;
+    transform: rotate(37deg);
+    transform-origin: top right;
+    text-transform: uppercase;
+  }
+  .ribban{
+    margin-right: -15px;
+  }
+  #ribban_2{
+    background-color: rgb(170, 168, 168);
+  }
+  #ribban_3{
+    background-color: #e47412;
+  }
+  #ribban_4{
+    background-color: gray;
+  }
+  .prix {
+    background-color: #fff;
+    padding: 20px 10px;
+  }
+
+  .prix .price {
+    font-size: 48px;
+    color: #444;
+    margin: 0;
+  }
+
+  .prix .price small {
+    font-size: 18px;
+    vertical-align: top;
+  }
+.jour{
+    color: #056be0;
+    font-size: 25PX;
+}
+#taxe{
+    color: #696666;
+}
+.taxe{
+    margin-bottom: 20px;
+}
+hr{
+    width: 50%;
+    margin-left: 55px;
+    margin-bottom: 20px;
+}
+.ligne{
+    margin-bottom: 70px;
+}
+.lignes{
+    margin-bottom: 180px;
+}
+.abonner{
+    background-color: #007bff;
+    padding: 15px;
+    width: 150px;
+    margin-left: 30px;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.abonner_2{
+    background-color: #007bff;
+    padding: 15px;
+    width: 150px;
+    margin-left: 70px;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.cadre:hover{
+    transform: translateY(-20px);
+}
+.cadre:hover ~.cadre{
+    transform: translateY(20px);
+}
+.couleur{
+    color: #0f1de7;
+}
+.espace{
+    height: 30px;
+}
+.dero{
+    display: none;
+    color: #007bff;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.deuxieme:hover .dero{
+    display: block;
+}
+.dero li{
+    margin: 5px 0;
+    cursor: pointer;
+}
+.dero li a{
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+
+}
+.dero li a:hover{
+    background-color: #f0f0f0;
+    color: #000;
+}
+.llll:hover{
+    text-shadow: 0 0 5px white;
+}
+.llll:hover{
+    color: #96acf3;
+}
+
+      </style>
+    
+</head>
+<body class="bg-gray-100 md:t">
+    <!-- Haut de la page -->
+    <header class="bg-blue-600 text-white">
+        <nav class="w-full">
+            <div class="container mx-auto max-w-7xl px-2">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex shrink-0 items-center text-white">
+                    Bienvenue sur la plateforme TCF Canada
+                    </div>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4 pl-52">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="index.html" class="rounded-md  px-3 py-2 text-sm font-medium text-white hover:text-gray-400 "><i class="fa-solid fa-graduation-cap"></i> FORMATIONS</a>
+                      <a href="tarif_tailwindcss.html" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-solid fa-credit-card"></i> TARIFS</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-sharp-duotone fa-solid fa-headset"></i> CONTACTEZ-NOUS</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-gray-400"><i class="fa-solid fa-wifi"></i> BLOG</a>
+                    </div>
+                  </div>
+                </div>
+                  <div class="mr-6">
+                    <div class="mr-40 flex items-center space-x-2 sm:mr-6">
+                        <a href="" class="l"><i class="fa-brands fa-facebook"></i></a> <a href="" class="l"><i class="fa-brands fa-instagram"></i></a> <a href="" class="l"><i class="fa-brands fa-youtube"></i></a> <a href="" class="l"><i class="fa-brands fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class=" bg-zinc-50 p-2 flex space-x-4 ">
+        <button class="md:hidden text-gray-800" id="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          <div class="w-32 ml-6">
+        <img src="logo.webp" alt="logo" height="30%" width="70%" class="ml-48 sm:ml-6">
+      </div>
+        <div class="hidden sm:ml-6 sm:block">
+        <ul class="flex space-x-4 p-4 pl-52 ">
+            <li class="deuxieme space-x-4 relative group"><a href="" class=" space-x-2 hover:text-blue-600"><i class="fa-duotone fa-solid fa-book-open-reader"></i><span> COMPREHENSION ECRITE </span></a>
+            <ul class="absolute left-0 w-48 bg-white border shadow-lg hidden group-hover:block">
+                <li><a href="" class="hover:text-blue-600">Les sujets d'actualites</a></li>
+                <li><a href="" class="hover:text-blue-600">Methodologie</a></li>
+                <li><a href="" class="hover:text-blue-600"> correction des sujets d'expression ecritee</a></li>
+                <li><a href="" class="hover:text-blue-600">Plate-forme de redaction</a></li>
+            </ul>
+        </li>
+            <li class="deuxieme space-x-4 relative group"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-headphones"></i><span> COMPREHENSION ORALE</span></a>
+            <ul class="absolute left-0 w-48 bg-white border border-gray-200  shadow-lg hidden group-hover:block w-48 ">
+                <li><a href="" class="hover:text-blue-600">Les sujets d'actualites</a></li>
+                <li><a href="" class="hover:text-blue-600">Methodologie</a></li>
+                <li><a href="" class="hover:text-blue-600"> correction des sujets </a></li>
+            </ul>
+        </li>
+            <li class="deuxieme space-x-4"><a href="formulaire_actif.html" class=" hover:text-blue-600"><i class="fa-sharp fa-solid fa-right-to-bracket"></i><span> SE CONNECTER</span></a></li>
+            <li class="deuxieme space-x-4"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-pen"></i><span> EXPRESSION ECRITE</span></a>
+            <li class="deuxieme space-x-4"><a href="" class=" hover:text-blue-600"><i class="fa-solid fa-person-military-to-person"></i><span> EXPRESSION ORALE</span></a>    
+        </ul>
+       </div>
+      </div>
+           <!-- Header -->
+  <header class="text-center py-8 bg-blue-600 text-white">
+    <h1 class="text-4xl font-bold">Tarifs</h1>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="text-center my-8">
+      <h2 class="text-xl font-medium text-gray-700">NOS TESTS SONT TIRÉS DE L'EXAMEN RÉEL DU <span class="text-blue-600 font-semibold">TCF</span></h2>
+      <p class="text-gray-500 mt-2">Faites vos choix, enregistrez-vous, et commencez aujourd'hui</p>
+    </section>
+
+    <!-- Pricing Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      
+      <!-- Bronze Plan -->
+      <div class="">
+        <!-- Bande oblique -->
+        <div class=" text-orange-700 text-xs px-2 py-1 rounded">
+          <div class="cadre" id="cadre_2">
+            <div class="bronze">
+              <h2>Gold</h2>
+              <div class="ribban" id="ribban_3">Version 2024</div>
+            </div>
+            <div class="prix">
+              <p class="price">$49<small>.99</small></p>
+            </div>
+            <ul id="taxe">
+                <li class="taxe">Compréhension Écrite : <b><span class="couleur">38</span></b>  tests
+                    d’entraînement (<b>+1000</b> Textes)
+                    </li>
+                <hr>
+                <li class="taxe">Compréhension Orale :<b><span class="couleur">36</span></b> tests
+                    d’entraînement (<b>+1000</b> Extraits sonores) <li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">2</span></b> des actualités.</li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">3</span></b> des actualités.</li>
+                <hr>
+            </ul>
+            <h2 class="aligne text-gray-700">Accès : 2 Mois</h2>
+            <div class="abonner_2">S'ABONNER</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Silver Plan -->
+      <div class="">
+        <!-- Bande oblique -->
+        <div class="text-gray-700 text-xs px-2 py-1 rounded">
+            <div class="cadre" id="cadre_2">
+        <div class="bronze">
+          <h2>Bronze</h2>
+          <div class="ribban">Version 2024</div>
+        </div>
+        <div class="prix">
+          <p class="price">$14<small>.99</small></p>
+        </div>
+            <ul id="taxe">
+                <li class="taxe">Compréhension Écrite : <b><span class="couleur">38</span></b>  tests
+                    d’entraînement (<b>+1000</b> Textes)
+                    </li>
+                <hr>
+                <li class="taxe">Compréhension Orale :<b><span class="couleur">36</span></b> tests
+                    d’entraînement (<b>+1000</b> Extraits sonores) <li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">2</span></b> des actualités.</li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">3</span></b> des actualités.</li>
+                <hr>
+            </ul>
+            <h2 class="aligne">Accès : 5 Jours</h2>
+            <div class="abonner_2">S'ABONNER</div>
+            </div>
+      </div>
+      </div>
+
+      <!-- Gold Plan -->
+      <div class="">
+        <!-- Bande oblique -->
+        <div class="text-xs px-2 py-1 rounded ">
+          <div class="cadre" id="cadre_2">
+            <div class="bronze">
+              <h2>Silver</h2>
+              <div class="ribban" id="ribban_2">Version 2024</div>
+            </div>
+            <div class="prix">
+              <p class="price">$29<small>.99</small></p>
+            </div>
+            <ul id="taxe">
+                <li class="taxe">Compréhension Écrite : <b><span class="couleur">38</span></b>  tests
+                    d’entraînement (<b>+1000</b> Textes)
+                    </li>
+                <hr>
+                <li class="taxe">Compréhension Orale :<b><span class="couleur">36</span></b> tests
+                    d’entraînement (<b>+1000</b> Extraits sonores) <li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">2</span></b> des actualités.</li>
+                <hr>
+                <li class="taxe">Expression Orale : Corrections Tâche <b><span class="couleur">3</span></b> des actualités.</li>
+                <hr>
+            </ul>
+            <h2 class="aligne">Accès : 1 Mois</h2>
+            <div class="abonner_2">S'ABONNER</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="flex bg-blue-600 text-white mt-8 py-10 px-4">
+      <!-- Navigation -->
+       <div class="w-full sm:flex ml-12">
+      <div class="ml-12 sm:ml-40">
+        <h3 class="font-bold mb-2">Les pages</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class=""><i class="fa-solid fa-house-chimney"></i> Page d'accueil</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-book-open"></i> Compréhension Écrite</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-headphones"></i> Compréhension Orale</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-pen-to-square"></i> Expression Écrite</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-people-arrows"></i> Expression Orale</a></li>
+          <hr class="w-48 border-t-1 my-2">
+          <li><a href="#" class=""><i class="fa-solid fa-scale-balanced"></i> Politique de retour et de remboursement</a></li>
+        </ul>
+      </div>
+      <div class="ml-12">
+            <ul class="les_pages">
+                <li class="pag"><i class="fa-solid fa-gavel"></i> <span>Politique de confidentialite</span></li>
+                <hr class="w-52 border-t-1 my-2">
+                <li id="page"><i class="fa-solid fa-wifi"></i> <span>Blog</span></li>
+            </ul>
+        <h2 class="font-bold">Parametres du compte</h2>
+        <div class=" w-60 flex flex-col flex-1 bg-blue-600 ">
+            <a href="formulaire_actif.html" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow"><span class=""><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Se connecter</span></a>
+            <a href="formulaire_actif.html" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow "><span class=""><i class="fa-solid fa-user-plus"></i> S'inscrire</span></a>
+            <a href="" class="p-4 px-4 hover:bg-white hover:text-slate-900 shadow"><span class=""><i class="fa-solid fa-lock"></i> Mots de passe oublie</span></a>
+        </div>
+      </div>
+      <!-- Réseaux sociaux -->
+      <div class=" text-center mr-12">
+        <h4 class="font-bold mb-2">Nos Réseaux Sociaux</h4>
+        <div class="flex space-x-4 justify-center ">
+            <a href="" ><i class="fa-brands fa-youtube" style="color: #ab2b2b;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook" style="color: #063d9d;"></i></a>
+            <a href=""><i class="fa-brands fa-square-whatsapp" style="color: #63E6BE;"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        <div>
+        <h3 class="font-bold mb-4"> A propos de nous</h3>
+            <p  class="mb-4">plateforme specialisée dans la préparation au TCF Canada tests à conditions réelles sujets récents.</p>
+        </div>
+        </div>
+    <div class="text-center mr-40">
+        <h4 class="font-bold mb-4">Nous acceptons</h4>
+        <div class="flex flex-col bg-white rounded-lg justify-center items-center p-14 pr-32">
+        <div class="flex space-x-4 space-y-4">
+           <img src="paypal.jpeg" alt="" class="w-48 rounded-lg">
+           <img src="wester.jpg" alt="" class="w-48 rounded-lg">
+        </div>
+        <div class="flex space-x-4 space-y-2">
+           <img src="orange.jpeg" alt="" class="w-48 rounded-lg">
+           <img src="mtn.jpeg" alt="" class="w-48 rounded-lg">
+        </div>
+        </div>
+        <div class="mt-6 text-center">
+            <a href="#" class="bg-white text-slate-900 py-2 px-20 rounded-lg shadow hover:origin-top sm:px-20">Cliquez-ici</a>
+        </div>
+    </div>
+  </div>
+</div>
+    </body>
+    
+</html>
