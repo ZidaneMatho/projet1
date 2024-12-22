@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    /* Style général de la page */
+    body {
+      background: linear-gradient(135deg, #e272fb, #2b3030); /* Dégradé bleu */
+      min-height: 100vh; /* S'étend sur toute la hauteur de la fenêtre */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style personnalisé pour la calculatrice */
+    .calculator {
+      max-width: 400px; /* Largeur maximale de la calculatrice */
+      width: 100%; /* S'adapte à l'écran */
+      padding: 20px;
+      border-radius: 15px; /* Coins arrondis */
+      background: hsl(330, 19%, 90%); /* Fond blanc de la calculatrice */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre */
+    }
+
+    /* Style de l'écran de la calculatrice */
+    .screen {
+      height: 60px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      border: 1px solid #7b7878;
+      border-radius: 10px;
+      background-color: #eaeaea;
+    }
+
+    /* Style des boutons */
+    .btn {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 5px;
+      height: 60px;
+      border-radius: 10px; /* Coins arrondis */
+      border: 2px solid #ccc; /* Bordure */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    }
+
+    /* Couleurs spécifiques des boutons */
+    .btn-danger {
+      background: #ff4d4d; /* Rouge vif */
+      color: white;
+    }
+
+    .btn-warning {
+      background: #ffa726; /* Orange vif */
+      color: white;
+    }
+
+    .btn-info {
+      background: #42a5f5; /* Bleu vif */
+      color: white;
+    }
+
+    .btn-success {
+      background: #66bb6a; /* Vert vif */
+      color: white;
+    }
+
+    .btn-light {
+      background: #f5f5f5; /* Gris clair */
+      color: black;
+    }
+
+    .btn-light:hover {
+      background: #e0e0e0; /* Gris plus foncé au survol */
+    }
+  </style>
+
+    
+</head>
+<body>
+    <div class="calculator">
+        <!-- Affichage de l'écran -->
+        <input type="text" id="screen" class="form-control screen" readonly>
+    
+        <!-- Boutons de la calculatrice -->
+        <div class="row">
+          <div class="col-3"><button class="btn btn-danger w-100" onclick="clearScreen()">C</button></div>
+          <div class="col-3"><button class="btn btn-warning w-100" onclick="deleteLast()">←</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('(')">(</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue(')')">)</button></div>
+          <div class="col-3"><button class="btn btn-info w-100" onclick="appendValue('/')">÷</button></div>
+    
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('7')">7</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('8')">8</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('9')">9</button></div>
+          <div class="col-3"><button class="btn btn-info w-100" onclick="appendValue('*')">x</button></div>
+    
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('4')">4</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('5')">5</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('6')">6</button></div>
+          <div class="col-3"><button class="btn btn-info w-100" onclick="appendValue('-')">-</button></div>
+    
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('1')">1</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('2')">2</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('3')">3</button></div>
+          <div class="col-3"><button class="btn btn-info w-100" onclick="appendValue('+')">+</button></div>
+    
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('0')">0</button></div>
+          <div class="col-3"><button class="btn btn-light w-100" onclick="appendValue('.')">.</button></div>
+          <div class="col-3"><button class="btn btn-success w-100" onclick="calculate()">=</button></div>
+        </div>
+      </div>
+    
+      <!-- Script JavaScript -->
+      <script>
+        // Fonction pour ajouter une valeur à l'écran
+        function appendValue(value) {
+          const screen = document.getElementById('screen');
+          screen.value += value;
+        }
+    
+        // Fonction pour effacer l'écran
+        function clearScreen() {
+          const screen = document.getElementById('screen');
+          screen.value = '';
+        }
+    
+        // Fonction pour effacer uniquement le dernier caractère
+        function deleteLast() {
+          const screen = document.getElementById('screen');
+          screen.value = screen.value.slice(0, -1); // Supprime le dernier caractère
+        }
+    
+        // Fonction pour effectuer le calcul
+        function calculate() {
+          const screen = document.getElementById('screen');
+          try {
+            // Vérifie si une division par 0 est présente
+            if (screen.value.includes('/0')) {
+              screen.value = 'Erreur: Division par 0';
+            } else {
+              // Évalue l'expression mathématique
+              let result = eval(screen.value);
+    
+              // Si une opération commence par 0 et un opérateur, renvoie 0
+              if (/^0[+\-*/]/.test(screen.value)) {
+                screen.value = 0;
+              } else {
+                screen.value = result;
+              }
+            }
+          } catch (error) {
+            // En cas d'erreur (ex : syntaxe incorrecte)
+            screen.value = 'Erreur';
+          }
+        }
+      </script>
+    
+    
+</body>
+</html>
