@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Appliquer un joli dégradé sur toute l'application */
+body {
+    background: linear-gradient(135deg, #501F3A, #CB2D6F, #14A098, #0F292F);
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Conteneur principal des formulaires */
+.form-container {
+    background: rgba(80, 31, 58, 0.9); /* #501F3A en semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+/* Styles des champs */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #CCCCCC; /* Champ en gris clair */
+    color: #0F292F; /* Texte en bleu foncé */
+}
+
+/* Bouton principal */
+.button-primary {
+    background: #14A098;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    background: #0F292F; /* Changement au survol */
+}
